@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
-    "baseUrl": "./",
     "allowJs": true,
     "target": "ES6",
     "moduleResolution": "Node",
@@ -10,8 +9,11 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
     "lib": ["ES2015", "DOM", "DOM.Iterable"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+    }
   },
-  "exclude": ["node_modules",]
-
+  "exclude": ["node_modules"]
 }
 
