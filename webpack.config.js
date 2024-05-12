@@ -9,7 +9,7 @@ export default {
   mode: 'development',
   entry: './src/index.ts',
   output: {
-    filename: 'index.ts',
+    filename: 'index.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
   },
@@ -26,7 +26,7 @@ export default {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.ts?$/,
+        test: /\.ts$/,
         use: 'ts-loader',
         exclude: /node_modules/,
       },
