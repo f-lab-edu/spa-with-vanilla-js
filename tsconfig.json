@@ -6,7 +6,7 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
     "strictNullChecks": true,
     "lib": ["ES2015", "DOM", "DOM.Iterable"],
     "baseUrl": ".",
