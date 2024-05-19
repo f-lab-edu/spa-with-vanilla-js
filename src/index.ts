@@ -32,11 +32,3 @@ const movePage = (event: MouseEvent) => {
 button.forEach((btn) => {
   btn.addEventListener('click', movePage);
 });
-
-// window.addEventListener('click', (event: MouseEvent) => {
-//   const target = event.target as HTMLElement;
-//   console.log('target', target);
-//   if (target.matches('[data-navigate]')) {
-//     router.navigate(target.dataset.navigate as string);
-//   }
-// });
