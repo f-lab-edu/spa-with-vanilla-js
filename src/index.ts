@@ -1,25 +1,16 @@
 import './index.css';
+import pages from './pages';
 import Router from './router/index';
 
-const container = document.querySelector('.app') as HTMLElement;
-const h1 = document.querySelector('h1') as HTMLElement;
-const button = document.querySelectorAll(
-  'button'
-) as NodeListOf<HTMLButtonElement>;
-
-const pages = {
-  tech: () => (h1.innerText = 'tech page'),
-  design: () => (h1.innerText = 'design page'),
-  board: (params) => (container.innerText = `${params.id}`),
-};
+const button = document.querySelectorAll('button') as NodeListOf<HTMLButtonElement>;
 
 const router = new Router();
 
 router
-  .addRoute('#/', pages.tech)
-  .addRoute('#/tech', pages.tech)
-  .addRoute('#/tech/:id', pages.board)
-  .addRoute('#/design', pages.design)
+  .addRoute('/', pages.tech)
+  .addRoute('/tech', pages.tech)
+  .addRoute('/tech/:id', pages.detail)
+  .addRoute('/design', pages.design)
   .start();
 
 const movePage = (event: MouseEvent) => {
